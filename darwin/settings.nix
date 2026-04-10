@@ -9,7 +9,7 @@
     configurationRevision = self.rev or self.dirtyRev or null;
 
     startup.chime = false;
-    
+
     activationScripts.extraActivation.text = ''
       softwareupdate --install-rosetta --agree-to-license
     '';

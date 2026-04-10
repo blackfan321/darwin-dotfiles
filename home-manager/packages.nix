@@ -10,6 +10,7 @@
       iterm2
       qbittorrent
       keepassxc
+      uv
 
       # steam-platform-stats
       inputs.steam-platform-stats.packages.${pkgs.system}.steam-platform-stats

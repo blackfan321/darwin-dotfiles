@@ -7,6 +7,7 @@
     ./firefox.nix
     ./vim.nix
     ./fzf.nix
+    ./direnv.nix
   ];
 
   home = {

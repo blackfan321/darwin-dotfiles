@@ -17,15 +17,19 @@
       "hot"
       "vlc"
       "openvpn-connect"
+      "steam"
+      "openinterminal"
     ];
 
     masApps = {
-      Telegram = 747648890;
-      Lookupper = 1667225994;
+      "Telegram" = 747648890;
+      "Lookupper" = 1667225994;
+      "Windows App" = 1295203466;
     };
 
     brews = [
       "mas"
+      "colima"
     ];
   };
 }
