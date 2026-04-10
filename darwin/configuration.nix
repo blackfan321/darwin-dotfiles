@@ -1,12 +1,10 @@
-{ self, ... }:
 {
-  # touch ID for sudo
+  imports = [ ./modules ];
+
   security.pam.services.sudo_local.touchIdAuth = true;
 
-  # system defaults and preferences
   system = {
     stateVersion = 6;
-    configurationRevision = self.rev or self.dirtyRev or null;
 
     startup.chime = false;
 

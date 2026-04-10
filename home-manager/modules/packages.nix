@@ -11,6 +11,7 @@
       qbittorrent
       keepassxc
       uv
+      k9s
 
       # steam-platform-stats
       inputs.steam-platform-stats.packages.${pkgs.system}.steam-platform-stats

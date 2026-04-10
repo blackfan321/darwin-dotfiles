@@ -32,17 +32,46 @@
       ...
     }@inputs:
     let
-      primaryUser = "blackfan321";
+      pkgs = nixpkgs.legacyPackages.aarch64-darwin;
     in
     {
+      devShells.aarch64-darwin.default = pkgs.mkShell {
+        name = "darwin-dotfiles";
+
+        packages = with pkgs; [
+          nixfmt
+          nixd
+          nil
+          statix
+          deadnix
+        ];
+      };
+
       darwinConfigurations."macbook-air-m1" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
-          ./darwin
-          ./hosts/macbook-air-m1/configuration.nix
-        ];
-        specialArgs = { inherit inputs self primaryUser; };
-      };
+          ./darwin/configuration.nix
 
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              user = "blackfan321";
+              enable = true;
+              enableRosetta = true;
+              mutableTaps = true;
+            };
+          }
+
+          home-manager.darwinModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.blackfan321 = import ./home-manager/home.nix;
+              extraSpecialArgs = { inherit inputs; };
+            };
+          }
+        ];
+      };
     };
 }

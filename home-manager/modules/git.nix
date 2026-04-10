@@ -1,4 +1,3 @@
-{ primaryUser, ... }:
 {
   programs.git = {
     enable = true;
@@ -14,7 +13,7 @@
 
     extraConfig = {
       github = {
-        user = primaryUser;
+        user = "blackfan321";
       };
       init = {
         defaultBranch = "main";
