@@ -23,12 +23,10 @@
 
   outputs =
     {
-      self,
       darwin,
       nixpkgs,
       home-manager,
       nix-homebrew,
-      steam-platform-stats,
       ...
     }@inputs:
     let
@@ -41,7 +39,6 @@
         packages = with pkgs; [
           nixfmt
           nixd
-          nil
           statix
           deadnix
         ];
