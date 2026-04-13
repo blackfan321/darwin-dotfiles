@@ -21,5 +21,9 @@
       PROMPT='%F{green}%n@%m%f %F{blue}%~%f > '
       export GROFF_NO_SGR=1
     '';
+
+    loginExtra = ''
+      command -v defaultbrowser >/dev/null 2>&1 && defaultbrowser firefox >/dev/null 2>&1 || true
+    '';
   };
 }

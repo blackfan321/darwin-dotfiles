@@ -11,6 +11,12 @@
           "command": ["nixfmt"]
         },
         "options": {
+          "nixos": {
+            "expr": "{ }"
+          },
+          "nix-darwin": {
+            "expr": "(builtins.getFlake (builtins.toString ./.)).darwinConfigurations.\"macbook-air-m1\".options"
+          },
           "home-manager": {
             "expr": "(builtins.getFlake (builtins.toString ./.)).darwinConfigurations.\"macbook-air-m1\".options.home-manager.users.type.getSubOptions []"
           }

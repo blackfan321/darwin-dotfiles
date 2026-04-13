@@ -6,6 +6,7 @@
       just
       onefetch
       fastfetch
+      defaultbrowser
       uutils-coreutils-noprefix
       iterm2
       qbittorrent

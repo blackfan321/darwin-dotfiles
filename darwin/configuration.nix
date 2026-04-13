@@ -29,7 +29,6 @@
       NSGlobalDomain = {
         NSAutomaticSpellingCorrectionEnabled = false;
         NSAutomaticCapitalizationEnabled = false;
-        NSAutomaticPeriodSubstitutionEnabled = false;
         NSAutomaticWindowAnimationsEnabled = false;
       };
     };
