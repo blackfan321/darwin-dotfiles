@@ -13,6 +13,7 @@
       keepassxc
       uv
       k9s
+      nh
 
       # steam-platform-stats
       inputs.steam-platform-stats.packages.${pkgs.system}.steam-platform-stats
