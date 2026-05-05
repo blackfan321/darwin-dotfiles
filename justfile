@@ -1,2 +1,2 @@
 darwin-switch:
-  sudo nix run nix-darwin -- switch --flake .#macbook-air-m1
+  nh darwin switch .#macbook-air-m1
